@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/arrays/arrays.iml" filepath="$PROJECT_DIR$/arrays/arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/coding-challenges.iml" filepath="$PROJECT_DIR$/.idea/coding-challenges.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hashtables/hashtables.iml" filepath="$PROJECT_DIR$/hashtables/hashtables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stacks-queues/stacks-queues.iml" filepath="$PROJECT_DIR$/stacks-queues/stacks-queues.iml" />
     </modules>
   </component>
 </project>

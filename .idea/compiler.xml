@@ -8,10 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="arrays" />
+        <module name="hashtables" />
+        <module name="stacks-queues" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="arrays" target="8" />
+      <module name="arrays" target="1.5" />
+      <module name="hashtables" target="1.5" />
+      <module name="stacks-queues" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
