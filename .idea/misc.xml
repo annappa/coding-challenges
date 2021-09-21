@@ -10,6 +10,10 @@
         <option value="$PROJECT_DIR$/hashtables/pom.xml" />
         <option value="$PROJECT_DIR$/stacks-queues/pom.xml" />
         <option value="$PROJECT_DIR$/trees/pom.xml" />
+        <option value="$PROJECT_DIR$/dynamic_programming/pom.xml" />
+        <option value="$PROJECT_DIR$/General/pom.xml" />
+        <option value="$PROJECT_DIR$/linkedlist/pom.xml" />
+        <option value="$PROJECT_DIR$/string/pom.xml" />
       </list>
     </option>
   </component>

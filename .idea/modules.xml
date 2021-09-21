@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/General/General.iml" filepath="$PROJECT_DIR$/General/General.iml" />
       <module fileurl="file://$PROJECT_DIR$/arrays/arrays.iml" filepath="$PROJECT_DIR$/arrays/arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/coding-challenges.iml" filepath="$PROJECT_DIR$/.idea/coding-challenges.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dynamic_programming/dynamic_programming.iml" filepath="$PROJECT_DIR$/dynamic_programming/dynamic_programming.iml" />
       <module fileurl="file://$PROJECT_DIR$/hashtables/hashtables.iml" filepath="$PROJECT_DIR$/hashtables/hashtables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linkedlist/linkedlist.iml" filepath="$PROJECT_DIR$/linkedlist/linkedlist.iml" />
       <module fileurl="file://$PROJECT_DIR$/stacks-queues/stacks-queues.iml" filepath="$PROJECT_DIR$/stacks-queues/stacks-queues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/string/string.iml" filepath="$PROJECT_DIR$/string/string.iml" />
       <module fileurl="file://$PROJECT_DIR$/trees/trees.iml" filepath="$PROJECT_DIR$/trees/trees.iml" />
     </modules>
   </component>

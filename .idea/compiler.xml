@@ -7,12 +7,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="arrays" />
         <module name="hashtables" />
+        <module name="arrays" />
+        <module name="linkedlist" />
+        <module name="dynamic_programming" />
         <module name="stacks-queues" />
+        <module name="General" />
+        <module name="string" />
         <module name="trees" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="arrays" target="8" />
+      <module name="dynamic_programming" target="8" />
+      <module name="General" target="1.5" />
+      <module name="hashtables" target="1.5" />
+      <module name="linkedlist" target="1.5" />
+      <module name="stacks-queues" target="1.5" />
+      <module name="string" target="1.5" />
+      <module name="trees" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
