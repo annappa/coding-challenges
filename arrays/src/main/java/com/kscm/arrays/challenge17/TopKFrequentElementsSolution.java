@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-class Solution {
+class TopKFrequentElementsSolution {
     public int[] topKFrequent(int[] nums, int k) {
         // O(1) time
         if (k == nums.length) {
@@ -41,7 +41,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        TopKFrequentElementsSolution solution = new TopKFrequentElementsSolution();
         System.out.println(Arrays.toString(solution.topKFrequent(new int[]{1,1,1,2,2,3}, 2))); //[1,2]
         System.out.println(Arrays.toString(solution.topKFrequent(new int[]{1}, 1))); //[1]
         System.out.println(Arrays.toString(solution.topKFrequent(new int[]{-1, -1}, 1))); //[1]

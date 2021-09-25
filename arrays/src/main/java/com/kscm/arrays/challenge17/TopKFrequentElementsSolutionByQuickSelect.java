@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class SolutionQuickSelect {
+public class TopKFrequentElementsSolutionByQuickSelect {
     int[] unique;
     Map<Integer, Integer> count;
 
@@ -91,7 +91,7 @@ public class SolutionQuickSelect {
     }
 
     public static void main(String[] args) {
-        SolutionQuickSelect solution = new SolutionQuickSelect();
+        TopKFrequentElementsSolutionByQuickSelect solution = new TopKFrequentElementsSolutionByQuickSelect();
         System.out.println(Arrays.toString(solution.topKFrequent(new int[]{1,1,1,2,2,3}, 2))); //[1,2]
         System.out.println(Arrays.toString(solution.topKFrequent(new int[]{1}, 1))); //[1]
         System.out.println(Arrays.toString(solution.topKFrequent(new int[]{-1, -1}, 1))); //[1]
