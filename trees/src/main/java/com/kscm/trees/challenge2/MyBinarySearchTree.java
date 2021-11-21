@@ -98,46 +98,46 @@ public class MyBinarySearchTree {
         return breathFirstSearchRecursively(queue, list);
     }
 
-    public List<Integer> depthFirstSearchInOder() {
-        return depthFirstSearchInOder(root, new ArrayList<>());
+    public List<Integer> depthFirstSearchInOrder() {
+        return depthFirstSearchInOrder(root, new ArrayList<>());
     }
 
-    private List<Integer> depthFirstSearchInOder(MyBinaryNode node, ArrayList<Integer> list) {
+    private List<Integer> depthFirstSearchInOrder(MyBinaryNode node, ArrayList<Integer> list) {
         if(node.getLeft() != null) {
-            depthFirstSearchInOder(node.getLeft(), list);
+            depthFirstSearchInOrder(node.getLeft(), list);
         }
         list.add(node.getValue());
         if(node.getRight() != null) {
-            depthFirstSearchInOder(node.getRight(), list);
+            depthFirstSearchInOrder(node.getRight(), list);
         }
         return list;
     }
 
-    public List<Integer> depthFirstSearchPreOder() {
-        return depthFirstSearchPreOder(root, new ArrayList<>());
+    public List<Integer> depthFirstSearchPreOrder() {
+        return depthFirstSearchPreOrder(root, new ArrayList<>());
     }
 
-    private List<Integer> depthFirstSearchPreOder(MyBinaryNode node, ArrayList<Integer> list) {
+    private List<Integer> depthFirstSearchPreOrder(MyBinaryNode node, ArrayList<Integer> list) {
         list.add(node.getValue());
         if(node.getLeft() != null) {
-            depthFirstSearchPreOder(node.getLeft(), list);
+            depthFirstSearchPreOrder(node.getLeft(), list);
         }
         if(node.getRight() != null) {
-            depthFirstSearchPreOder(node.getRight(), list);
+            depthFirstSearchPreOrder(node.getRight(), list);
         }
         return list;
     }
 
-    public List<Integer> depthFirstSearchPostOder() {
-        return depthFirstSearchPostOder(root, new ArrayList<>());
+    public List<Integer> depthFirstSearchPostOrder() {
+        return depthFirstSearchPostOrder(root, new ArrayList<>());
     }
 
-    private List<Integer> depthFirstSearchPostOder(MyBinaryNode node, ArrayList<Integer> list) {
+    private List<Integer> depthFirstSearchPostOrder(MyBinaryNode node, ArrayList<Integer> list) {
         if(node.getLeft() != null) {
-            depthFirstSearchPostOder(node.getLeft(), list);
+            depthFirstSearchPostOrder(node.getLeft(), list);
         }
         if(node.getRight() != null) {
-            depthFirstSearchPostOder(node.getRight(), list);
+            depthFirstSearchPostOrder(node.getRight(), list);
         }
         list.add(node.getValue());
         return list;
@@ -196,8 +196,8 @@ public class MyBinarySearchTree {
         //             18
         System.out.println("Breath first search " + tree.breathFirstSearchIteratively()); // [9, 4, 21, 1, 6, 15, 170, 10, 20, 18]
         System.out.println("Breath first search " + tree.breathFirstSearchRecursively()); // [9, 4, 21, 1, 6, 15, 170, 10, 20, 18]
-        System.out.println("Depth first search - in order " + tree.depthFirstSearchInOder()); // [1, 4, 6, 9, 10, 15, 18, 20, 21, 170]
-        System.out.println("Depth first search - pre order " + tree.depthFirstSearchPreOder()); // [9, 4, 1, 6, 21, 15, 10, 20, 18, 170]
-        System.out.println("Depth first search - post order " + tree.depthFirstSearchPostOder()); // [1, 6, 4, 10, 18, 20, 15, 170, 21, 9]
+        System.out.println("Depth first search - in order " + tree.depthFirstSearchInOrder()); // [1, 4, 6, 9, 10, 15, 18, 20, 21, 170]
+        System.out.println("Depth first search - pre order " + tree.depthFirstSearchPreOrder()); // [9, 4, 1, 6, 21, 15, 10, 20, 18, 170]
+        System.out.println("Depth first search - post order " + tree.depthFirstSearchPostOrder()); // [1, 6, 4, 10, 18, 20, 15, 170, 21, 9]
     }
 }

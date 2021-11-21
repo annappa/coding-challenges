@@ -13,6 +13,7 @@ public class Solution {
         if(nums1 == null || nums1.length == 0 || nums2 == null || nums2.length == 0 || k <= 0)
             return res;
 
+        //Add all the pairs of 1st element from 1st array to the all the elements of sec array because they are of minimum sum as both arrays are sorted in ascendind order
         for(int j = 0; j <= n-1; j++)
             pq.offer(new Tuple(0, j, nums1[0]+nums2[j]));
 

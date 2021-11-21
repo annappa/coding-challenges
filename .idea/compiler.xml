@@ -23,7 +23,7 @@
       <module name="General" target="8" />
       <module name="hashtables" target="1.5" />
       <module name="linkedlist" target="1.5" />
-      <module name="stacks-queues" target="1.5" />
+      <module name="stacks-queues" target="8" />
       <module name="string" target="8" />
       <module name="trees" target="8" />
     </bytecodeTargetLevel>

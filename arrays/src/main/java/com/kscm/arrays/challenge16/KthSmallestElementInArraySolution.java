@@ -9,7 +9,8 @@ public class KthSmallestElementInArraySolution {
     /*
     O(N log K) running time + O(K) memory
 
-    Other possibility is to use a max oriented priority queue that will store the K-th smallest values. The algorithm iterates over the whole input and maintains the size of priority queue.
+    Other possibility is to use a max oriented priority queue that will store the K-th smallest values.
+    The algorithm iterates over the whole input and maintains the size of priority queue.
      */
     public int findKthSmallest_using_pq(int[] nums, int k) {
 
