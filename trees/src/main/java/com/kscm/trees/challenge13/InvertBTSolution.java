@@ -35,6 +35,28 @@ public class InvertBTSolution {
         return root;
     }
 
+    private TreeNode invertTreeByRec(TreeNode root) {
+        if(root == null)
+            return null;
+
+        TreeNode node = invertTreeByRec(root.left);
+        root.left = invertTreeByRec(root.right);
+        root.right = node;
+
+        return root;
+    }
+
+    private TreeNode invertTreeByRecP1(TreeNode root) {
+        if(root == null)
+            return null;
+
+        TreeNode temp = invertTreeByRecP1(root.left);
+        root.left = invertTreeByRecP1(root.right);
+        root.right = temp;
+
+        return root;
+    }
+
     public static void main(String[] args) {
         InvertBTSolution invertBTSolution = new InvertBTSolution();
         TreeNode n3 = new TreeNode(3);
@@ -44,7 +66,9 @@ public class InvertBTSolution {
         TreeNode n7 = new TreeNode(7, null, n8);
         TreeNode n6 = new TreeNode(6, n4, n7);
 
-        System.out.println(invertBTSolution.invertTree(n6));
+        //System.out.println(invertBTSolution.invertTree(n6));
+        //System.out.println(invertBTSolution.invertTreeByRec(n6));
+        System.out.println(invertBTSolution.invertTreeByRecP1(n6));
     }
 }
 
@@ -53,3 +77,8 @@ public class InvertBTSolution {
         4       7
    3        5       8
  */
+/*
+            6
+        7        4
+    8        5      3
+  */

@@ -91,8 +91,10 @@ class Solution {
         }
 
         //Keep going to left
+        //After removing the node, we need to assign null to root.left
         root.left = removeNodes(root.left, toDelete, remaining);
-        //Keep going to left
+        //Keep going to right
+        //After removing the node, we need to assign null to root.left
         root.right = removeNodes(root.right, toDelete, remaining);
 
         //When we are at some node and it that value needs to be deleted
@@ -127,6 +129,11 @@ class Solution {
 
         TreeNode n2 = new TreeNode(2, n4, n5);
         TreeNode n3 = new TreeNode(3, n6, n7);
+        /*
+                              1
+                        2          3
+                    4      5    6      7
+         */
 
         TreeNode n1 = new TreeNode(1, n2, n3);
 

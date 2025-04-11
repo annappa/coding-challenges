@@ -19,13 +19,13 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="arrays" target="8" />
-      <module name="dynamic_programming" target="1.5" />
-      <module name="General" target="1.5" />
+      <module name="dynamic_programming" target="8" />
+      <module name="General" target="8" />
       <module name="hashtables" target="1.5" />
       <module name="linkedlist" target="8" />
       <module name="stacks-queues" target="1.5" />
-      <module name="string" target="1.5" />
-      <module name="trees" target="1.5" />
+      <module name="string" target="8" />
+      <module name="trees" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

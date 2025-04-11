@@ -11,6 +11,7 @@ class Solution2 {
 
     public int kthSmallest(int[][] matrix, int k) {
         //top left is the smallest value, bottom right is the largest value in this matrix
+        // To understand the below logic, check the challenge22 package problem
         int smallest = matrix[0][0];
         int largest = matrix[matrix.length-1][matrix[0].length-1];
         while (smallest < largest) {
@@ -24,6 +25,8 @@ class Solution2 {
         return smallest;
     }
 
+    //https://leetcode.com/problems/search-a-2d-matrix-ii/discuss/66160/AC-clean-Java-solution
+    //Look at challenge21 package problem
     private int getNumberOfElementsSmallerThenMedVal(int[][] matrix, int target) {
         int count = 0;
         int i = 0;

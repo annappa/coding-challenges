@@ -25,12 +25,14 @@ public class KthLargestElementInArraySolution {
      */
     public int findKthLargest_using_pq(int[] nums, int k) {
 
+        // By default, order of priorty queue is min (Min Heap)
         final PriorityQueue<Integer> pq = new PriorityQueue<>();
         for(int val : nums) {
             //logk
             pq.offer(val);
             //pq.add(val);
 
+            //smaller elements will be popped out
             if(pq.size() > k) {
                 pq.poll();
             }

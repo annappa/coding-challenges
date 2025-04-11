@@ -31,8 +31,9 @@ public class Solution {
         }
 
         for(int i=start; i < candidates.length; i++) {
-            // if are processing the candidate for the first time or
+            // if we are processing the candidate for the first time or
             // if the previous candidate and current candidate are not the same, means skipping the processing for the duplicates
+            // Candidates are sorted , check main method
             if(i == start || candidates[i] != candidates[i-1]) {
                 list.add(candidates[i]);
                 findCombinations(candidates, i+1, target - candidates[i], list, result);

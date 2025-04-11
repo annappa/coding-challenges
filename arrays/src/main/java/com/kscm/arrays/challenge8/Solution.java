@@ -8,6 +8,9 @@ class Solution {
         int low=0, high=nums.length;
         int mid;
 
+        // since we are finding the range, there should be multiple values,
+        // so lo < hi when compared to bs's lo <= high, in bs only one key will be there
+        // So no need to search at lo = hi
         while(low<high) {
             mid = (low + high)/2;
             if(nums[mid] == target) {
@@ -44,6 +47,7 @@ class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
         System.out.println(Arrays.toString(solution.searchRange(new int[]{5,7,7,8,8,10}, 8))); // [3, 4]
+        System.out.println(Arrays.toString(solution.searchRange(new int[]{5,7,7,8,8,10}, 5))); // [3, 4]
         System.out.println(Arrays.toString(solution.searchRange(new int[]{5,7,7,8,8,10}, 6))); // [-1, -1]
         System.out.println(Arrays.toString(solution.searchRange(new int[]{}, 0))); // [-1, -1]
     }

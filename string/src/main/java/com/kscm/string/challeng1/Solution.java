@@ -12,6 +12,9 @@ public class Solution {
                 set.add(s.charAt(j++));
                 max=Math.max(set.size(), max);
             } else {
+                //since we are finding longest substring, we need to start removing char
+                // from begining the moment we found the duplicate to find the
+                // next longest substring
                 set.remove(s.charAt(i++));
             }
         }
@@ -21,7 +24,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.lengthOfLongestSubstring("abcabcbb")); //3
+        System.out.println(solution.lengthOfLongestSubstring("abcbcbb")); //3
         System.out.println(solution.lengthOfLongestSubstring("bbbbb")); //1
         System.out.println(solution.lengthOfLongestSubstring("pwwkew")); //3
         System.out.println(solution.lengthOfLongestSubstring("")); //0

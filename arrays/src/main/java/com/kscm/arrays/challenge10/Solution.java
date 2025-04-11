@@ -7,15 +7,17 @@ public class Solution {
         int n = matrix.length;
         PriorityQueue<Tuple> pq = new PriorityQueue<Tuple>();
 
+        //first row elements are already in sorted (asc) order, so add all these to pq
         for(int j = 0; j <= n-1; j++)
             pq.offer(new Tuple(0, j, matrix[0][j]));
 
         for(int i = 0; i < k-1; i++) {
             Tuple t = pq.poll();
 
+            // we reached the last row, so no more elements can be added, so skipping
             if(t.x == n-1)
                 continue;
-
+            // add the next row elements
             pq.offer(new Tuple(t.x+1, t.y, matrix[t.x+1][t.y]));
         }
         return pq.poll().val;

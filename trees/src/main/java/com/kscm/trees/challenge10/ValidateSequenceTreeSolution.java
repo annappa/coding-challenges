@@ -26,6 +26,28 @@ public class ValidateSequenceTreeSolution {
         return (isValidSequence(root.left, n,pos+1, arr) || isValidSequence(root.right, n,pos+1,arr));
     }
 
+    private boolean isValidSequenceP1(TreeNode n1, int[] arr) {
+        int n = arr.length;
+        return isValidSequenceP1(n1, n, arr, 0);
+    }
+
+    private boolean isValidSequenceP1(TreeNode node, int n, int[] arr, int pos) {
+        if(node == null)
+            return false;
+
+        if(pos == n) {
+            return false;
+        }
+
+        if(node.val != arr[pos])
+            return false;
+
+        if(node.left == null && node.right==null && pos == n-1)
+            return true;
+
+        return isValidSequenceP1(node.left, n, arr, pos+1) || isValidSequenceP1(node.right, n, arr, pos+1);
+    }
+
     public static void main(String[] args) {
         ValidateSequenceTreeSolution validateSequenceTreeSolution = new ValidateSequenceTreeSolution();
         TreeNode n5 = new TreeNode(5);
@@ -36,7 +58,9 @@ public class ValidateSequenceTreeSolution {
         TreeNode n1 = new TreeNode(1, n2, n3);
 
         System.out.println(validateSequenceTreeSolution.isValidSequence(n1, new int[]{1, 2, 4}));
+        System.out.println(validateSequenceTreeSolution.isValidSequenceP1(n1, new int[]{1, 2, 4}));
         System.out.println(validateSequenceTreeSolution.isValidSequence(n1, new int[]{1, 2, 4, 5}));
+        System.out.println(validateSequenceTreeSolution.isValidSequenceP1(n1, new int[]{1, 2, 4, 5}));
 
     }
 }

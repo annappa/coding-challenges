@@ -26,9 +26,33 @@ public class ConstructBSTGivenPreOrderArraySolution3 {
         return root;
     }
 
+    private TreeNode bstFromPreorderP1(int[] arr) {
+        TreeNode root = null;
+
+        for(int i=0; i<arr.length; i++) {
+            root = buildBSTP1(root, arr[i]);
+        }
+
+        return root;
+    }
+
+    private TreeNode buildBSTP1(TreeNode root, int elem) {
+        if(root == null)
+            return new TreeNode(elem);
+
+        if(elem < root.val) {
+            root.left = buildBSTP1(root.left, elem);
+        } else {
+            root.right = buildBSTP1(root.right, elem);
+        }
+
+        return root;
+    }
+
     public static void main(String[] args) {
         ConstructBSTGivenPreOrderArraySolution3 constructBSTGivenPreOrderArraySolution = new ConstructBSTGivenPreOrderArraySolution3();
         int[] arr = new int[]{8,5,1,7,10,12};
         System.out.println(constructBSTGivenPreOrderArraySolution.bstFromPreorder(arr));
+        System.out.println(constructBSTGivenPreOrderArraySolution.bstFromPreorderP1(arr));
     }
 }

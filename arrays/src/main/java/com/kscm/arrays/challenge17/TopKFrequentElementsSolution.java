@@ -28,7 +28,8 @@ class TopKFrequentElementsSolution {
         // O(N log k) < O(N log N) time
         for (int n: count.keySet()) {
             heap.add(n);
-            if (heap.size() > k) heap.poll();
+            if (heap.size() > k)
+                heap.poll();
         }
 
         // 3. build an output array
@@ -43,6 +44,7 @@ class TopKFrequentElementsSolution {
     public static void main(String[] args) {
         TopKFrequentElementsSolution solution = new TopKFrequentElementsSolution();
         System.out.println(Arrays.toString(solution.topKFrequent(new int[]{1,1,1,2,2,3}, 2))); //[1,2]
+        System.out.println(Arrays.toString(solution.topKFrequent(new int[]{1,1,1,1,2,2,2,2,3,3,3}, 2))); //[1,2]
         System.out.println(Arrays.toString(solution.topKFrequent(new int[]{1}, 1))); //[1]
         System.out.println(Arrays.toString(solution.topKFrequent(new int[]{-1, -1}, 1))); //[1]
     }

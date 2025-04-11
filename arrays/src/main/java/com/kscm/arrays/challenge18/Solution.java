@@ -18,8 +18,11 @@ public class Solution {
     private static void backtrack(int[] cand, int start, int target, List<Integer> list, List<List<Integer>> result) {
         if(target < 0)
             return;
-        if(target == 0)
+        if(target == 0) {
             result.add(new ArrayList<>(list));
+            return;
+        }
+
 
         for(int i=start; i < cand.length; i++) {
             list.add(cand[i]);

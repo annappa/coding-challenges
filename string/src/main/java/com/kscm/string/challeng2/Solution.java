@@ -9,6 +9,13 @@ Greedy works since we can only delete characters.
 So, count each character first. For each 26 characters, check if it's count is already used. If so, delete characters until you find unused count, or reach zero.
  */
 public class Solution {
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.minDeletions("aab")); //0
+        System.out.println(solution.minDeletions("aaabbbcc")); // 2
+        System.out.println(solution.minDeletions("ceabaacb")); //2
+    }
+
     public int minDeletions(String s) {
         int[] freq = new int[26];
         Set<Integer> used = new HashSet<>();
@@ -26,10 +33,7 @@ public class Solution {
         return res;
     }
 
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.minDeletions("aab")); //0
-        System.out.println(solution.minDeletions("aaabbbcc")); // 2
-        System.out.println(solution.minDeletions("ceabaacb")); //2
+    public int minDeletions2(String s) {
+
     }
 }

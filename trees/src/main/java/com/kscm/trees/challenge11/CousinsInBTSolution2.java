@@ -1,13 +1,16 @@
 package com.kscm.trees.challenge11;
 
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class CousinsInBTSolution2 {
     int xParent=-1;
     int yParent=-1;
     int xHeight=0;
     int yHeight=0;
+
+    int xParentP1=-1;
+    int yParentP1=-1;
+    int xHeightP1=0;
+    int yHeightP1=0;
 
     public boolean isCousins(TreeNode root, int A, int B) {
         if(root == null)
@@ -47,6 +50,42 @@ public class CousinsInBTSolution2 {
         find_HeightParent(curr.right, x, y, curr.val, height+1);
     }
 
+    private boolean isCousinsP1(TreeNode root, int A, int B) {
+        if(root == null) {
+            return false;
+        }
+
+        if(root.val == A || root.val == B) {
+            return false;
+        }
+
+        find_HeightParentP1(root, A, B, -1, 0);
+
+        if(xParentP1 != yParentP1 && xHeight == yHeight) {
+            return true;
+        }
+        return false;
+    }
+
+    private void find_HeightParentP1(TreeNode cN, int A, int B, int parent, int height) {
+        if(cN == null) {
+            return;
+        }
+
+        if(cN.val == A) {
+            xParentP1 = parent;
+            xHeight = height;
+        }
+
+        if(cN.val == B) {
+            yParentP1 = parent;
+            yHeightP1 = height;
+        }
+
+        find_HeightParentP1(cN.left, A, B, cN.val, height+1);
+        find_HeightParentP1(cN.right, A, B, cN.val, height+1);
+    }
+
     public static void main(String[] args) {
         CousinsInBTSolution2 cousinsInBTSolution = new CousinsInBTSolution2();
         TreeNode n5 = new TreeNode(5);
@@ -57,7 +96,9 @@ public class CousinsInBTSolution2 {
         TreeNode n1 = new TreeNode(1, n2, n3);
 
         System.out.println(cousinsInBTSolution.isCousins(n1, 4, 6));
+        System.out.println(cousinsInBTSolution.isCousinsP1(n1, 4, 6));
         System.out.println(cousinsInBTSolution.isCousins(n1, 4, 5));
+        System.out.println(cousinsInBTSolution.isCousinsP1(n1, 4, 5));
     }
 }
 

@@ -25,6 +25,7 @@ public class Solution {
             list.add(nums2[t.y]);
             res.add(list);
 
+            // we reached the last row(or end of first array), so no more elements can be added, so skipping
             if(t.x == m - 1)
                 continue;
 

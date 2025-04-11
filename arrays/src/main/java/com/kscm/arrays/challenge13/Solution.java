@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class Solution {
     //Aproach1
+    //Time complexity: O(n)
+    //Space Complexity: O(n)
     public void rotate(int[] nums, int k) {
         int arraySize = nums.length;
         int[] res = new int[arraySize];
@@ -21,6 +23,7 @@ public class Solution {
     }
 
     //Approach2
+    // Space complexity is O(1)
     public void rotate1(int[] nums, int k) {
         k %= nums.length;
         reverse(nums, 0, nums.length - 1); // [1, 2, 3, 4 , 5, 6, 7] --> [7, 6, 5, 4, 3, 2, 1]
@@ -40,7 +43,8 @@ public class Solution {
     }
 
     //Approach3
-    //O(n)
+    //Time: O(n)
+    //Space: O(n)
     public void rotate2(int[] nums, int k) {
         k = k % nums.length;
         //(1) new array;

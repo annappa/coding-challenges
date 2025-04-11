@@ -35,6 +35,16 @@ public class MaxDepthOfATreeSolution {
         return Math.max(left, right) + 1;
     }
 
+    private int maxDepthP1(TreeNode root) {
+        if(root == null)
+            return 0;
+
+        int left = maxDepthP1(root.left);
+        int right = maxDepthP1(root.right);
+
+        return Math.max(left, right) + 1;
+    }
+
     public static void main(String[] args) {
         MaxDepthOfATreeSolution solution = new MaxDepthOfATreeSolution();
         TreeNode n15 = new TreeNode(15);
@@ -44,6 +54,7 @@ public class MaxDepthOfATreeSolution {
         TreeNode n3 = new TreeNode(3, n9, n20);
 
         System.out.println(solution.maxDepth(n3));
+        System.out.println(solution.maxDepthP1(n3));
     }
 }
 /*

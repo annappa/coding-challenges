@@ -22,6 +22,7 @@ class TreeNode {
 
 public class DiameterOfABTSolution {
     int diameter=0;
+    int diameterP1=0;
 
     /*
     The question can be solved by small modification to program of Height of tree.
@@ -52,6 +53,23 @@ public class DiameterOfABTSolution {
         return Math.max(leftDiameter, rightDiameter) + 1;
     }
 
+    private int diameterOfBinaryTreeP1(TreeNode root) {
+        maxDepthP1(root);
+        return diameterP1;
+    }
+
+    private int maxDepthP1(TreeNode root) {
+        if(root == null)
+            return 0;
+
+        int leftD = maxDepth(root.left);
+        int rightD = maxDepth(root.right);
+
+        diameterP1 = Math.max(diameterP1, leftD+rightD);
+
+        return Math.max(leftD, rightD) + 1;
+    }
+
     public static void main(String[] args) {
         DiameterOfABTSolution diameterOfABTSolution = new DiameterOfABTSolution();
         TreeNode n4 = new TreeNode(4);
@@ -61,5 +79,6 @@ public class DiameterOfABTSolution {
         TreeNode n1 = new TreeNode(1, n2, n3);
 
         System.out.println(diameterOfABTSolution.diameterOfBinaryTree(n1));
+        System.out.println(diameterOfABTSolution.diameterOfBinaryTreeP1(n1));
     }
 }

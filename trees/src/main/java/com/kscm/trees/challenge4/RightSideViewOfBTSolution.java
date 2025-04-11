@@ -48,15 +48,36 @@ public class RightSideViewOfBTSolution {
 
     }
 
+    private static List<Integer> rightSideViewP1(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        rightViewP1(root, res, 0);
+        return res;
+    }
+
+    private static void rightViewP1(TreeNode root, List<Integer> res, int depth) {
+        if(root == null)
+            return;
+
+        if(depth == res.size())
+            res.add(root.val);
+
+        rightViewP1(root.right, res, depth+1);
+        rightViewP1(root.left, res, depth+1);
+    }
+
     public static void main(String[] args) {
         RightSideViewOfBTSolution sideViewOfBTSolution = new RightSideViewOfBTSolution();
         TreeNode n5 = new TreeNode(5);
         TreeNode n4 = new TreeNode(4);
+        //TreeNode n2 = new TreeNode(2, n5, null);
         TreeNode n2 = new TreeNode(2, null, n5);
-        TreeNode n3 = new TreeNode(3, null, n4);
+        //TreeNode n3 = new TreeNode(3, null, null);
+        //TreeNode n3 = new TreeNode(3, null, n4);
+        TreeNode n3 = new TreeNode(3, n4, null);
         TreeNode n1 = new TreeNode(1, n2, n3);
 
-        System.out.println(sideViewOfBTSolution.rightSideView(n1));
+        //System.out.println(sideViewOfBTSolution.rightSideView(n1));
+        System.out.println(sideViewOfBTSolution.rightSideViewP1(n1));
     }
 }
 

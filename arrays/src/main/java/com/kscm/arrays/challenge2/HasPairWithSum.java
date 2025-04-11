@@ -7,7 +7,7 @@ public class HasPairWithSum {
     public static void main(String[] args) {
         int[] arr = new int[] {1, 2, 3, 9};
         int[] arr1 = new int[] {1, 2, 4, 4};
-        int sum=8;
+        int sum=2;
 
         System.out.println(hasPairWithSum(arr, sum));
         System.out.println(hasPairWithSum(arr1, sum));
@@ -35,6 +35,7 @@ public class HasPairWithSum {
     private static boolean hasPairWithSum2(int arr[], int sum) {
         int len = arr.length;
         Set mySet = new HashSet();
+        mySet.add(arr[0]);
 
         for(int i=0; i<len; i++) {
             if(mySet.contains(arr[i]))
