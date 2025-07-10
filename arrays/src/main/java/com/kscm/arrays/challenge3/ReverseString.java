@@ -6,6 +6,17 @@ package com.kscm.arrays.challenge3;
 
 public class ReverseString {
     // reverse method 1
+
+    /* Inefficient approach
+    Memory Consumption
+    The repeated creation of temporary string objects and copying of contents leads to:
+
+        - Increased memory allocation: Multiple string objects are created because string is immutaboe, consuming more memory.
+        - Garbage collection overhead: The JVM needs to garbage collect the temporary string objects, which can lead to performance issues.
+
+        Suppose you have a string of length n. The reverse method will create n new string objects, each with a length ranging from 1 to n.
+        This results in a total memory allocation of O(n^2) characters.
+     */
     private String reverse(String string) {
         String temp = "";
         for (int i = string.length() - 1; i >= 0; i--) {

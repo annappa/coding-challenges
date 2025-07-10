@@ -1,4 +1,4 @@
-##Info
+## Info
 [Solution explanation](https://www.youtube.com/watch?v=99Gw7Hezii8)
 
 ## Problem Statement: Google
