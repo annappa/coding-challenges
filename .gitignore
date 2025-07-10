@@ -1,0 +1,50 @@
+# Maven target directory
+/target/
+
+# Eclipse IDE
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA
+*.iml
+.idea/
+out/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# VS Code
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Java-specific
+*.class
+*.jar
+*.war
+*.ear
+
+# Environment or secret files
+.env
+*.keystore
+
+# Local dev tool files
+*.swp
+*.bak
+*.tmp
+
+# Test reports
+/test-output/
+surefire-reports/
+failsafe-reports/
